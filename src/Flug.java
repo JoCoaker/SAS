@@ -19,6 +19,17 @@ public class Flug
     private Flughafen[] herkuenfte = new Flughafen[5];
     private Flughafen[] destinationen = new Flughafen[5];
 
+    /**
+     * Konstruktor
+     * @param datum
+     * @param flugNummer
+     * @param organisator
+     * @param befoerderungsmittel
+     * @param piloten
+     * @param passagiere
+     * @param herkuenfte
+     * @param destinationen
+     */
     public Flug(Date datum, String flugNummer, Fluglinie organisator, Flugzeug befoerderungsmittel, Pilot[] piloten, Passagier[] passagiere, Flughafen[] herkuenfte, Flughafen[] destinationen){
         this.datum = datum;
         this.flugNummer = flugNummer;
@@ -32,6 +43,13 @@ public class Flug
         System.out.println(this.toString() + " angelegt.");
     }
 
+    /**
+     * Konstruktor
+     * @param datum
+     * @param flugNummer
+     * @param organisator
+     * @param befoerderungsmittel
+     */
     public Flug(Date datum, String flugNummer, Fluglinie organisator, Flugzeug befoerderungsmittel){
         this.datum = datum;
         this.flugNummer = flugNummer;
