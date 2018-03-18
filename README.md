@@ -6,8 +6,8 @@ Erst einmal den Buttonn `Fork` klicken und einen eigenes Repo daraus zu machen.
 Danach diesen Clonen: `git clone [Repo-link]`.  
 Danach seine Datei auf seinen PC in den Repo Ordner `src` legen.  
 Jetzt in CMD in den Ordner (den mal geclonet hat) öffnen.  
-Dort `git add -A` ausführen...  
-danach `git commit -m"Meine Dateien"`.  
+Dort `git add src` ausführen...  
+danach `git commit -m "Meine Java Dateien"`.  
 Und zum schluss `git push`  
 Jetzt wieder auf mein Repo in GitHub gehen und den Button `New pull request` klicken.  
 Danach den Button `Create pull request` klick.  
