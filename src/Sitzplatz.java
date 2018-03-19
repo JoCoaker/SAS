@@ -11,11 +11,10 @@ public class Sitzplatz {
     private Flugzeug standort;
 
     Sitzplatz(String ort, int reihe, char platz,Flugzeug standort){
-        this.ort = ort;
-        this.reihe = reihe;
-        this.platz = platz;
-
-        this.standort = standort;
+        this.setOrt(ort);
+        this.setReihe(reihe);
+        this.setPlatz(platz);
+        this.setStandort(standort);
 
         System.out.println(this.toString() + " angelegt.");
     }
@@ -62,7 +61,8 @@ public class Sitzplatz {
 
     /*
         Setter
-     */
+    */
+
     public void setOrt(String ort) {
         this.ort = ort;
     }
@@ -76,6 +76,10 @@ public class Sitzplatz {
     }
 
     public void setStandort(Flugzeug standort) {
-        this.standort = standort;
+        if(standort == null){
+            throw new IllegalArgumentException("standort darf nicht null sein");
+        }else{
+            this.standort = standort;
+        }
     }
 }
