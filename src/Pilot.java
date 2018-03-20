@@ -11,6 +11,16 @@ public class Pilot {
     private Fluglinie arbeitgeber;
     private List<Flug> auftraege;
 
+    public Pilot(String name, String vorname, int personNr, Fluglinie arbeitgeber, List<Flug> aufträge) {
+        this.name = name;
+        this.vorname = vorname;
+        this.personNr = personNr;
+        this.arbeitgeber = arbeitgeber;
+        this.auftraege = aufträge;
+
+        System.out.println(toString() + " angelegt");
+    }
+
     public String getName() {
         return name;
     }
@@ -49,16 +59,6 @@ public class Pilot {
 
     public void verspaeten() {
         System.out.println(toString() + " wird verspätet");
-    }
-
-    public Pilot(String name, String vorname, int personNr, Fluglinie arbeitgeber, List<Flug> aufträge) {
-        this.name = name;
-        this.vorname = vorname;
-        this.personNr = personNr;
-        this.arbeitgeber = arbeitgeber;
-        this.auftraege = aufträge;
-
-        System.out.println(toString() + " angelegt");
     }
 
     @Override
