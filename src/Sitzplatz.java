@@ -1,6 +1,6 @@
 /**
  * Repräsentiert einen Sitzplatz in einem Flugzeug.
- * @author Niklas Kapelle
+ * @author Niklas Kapelle (198980)
  * @version 1.0.0
  */
 public class Sitzplatz {
@@ -37,11 +37,11 @@ public class Sitzplatz {
 
     @Override
     public String toString() {
-        return this.getClass().getName() + " " +  this.standort + " " + this.reihe + this.platz;
+        return this.getClass().getName() + " "+ this.reihe + this.platz;
     }
 
     /*
-        Getter
+     *  Getter
      */
     public String getOrt() {
         return ort;
@@ -60,8 +60,8 @@ public class Sitzplatz {
     }
 
     /*
-        Setter
-    */
+     *   Setter
+     */
 
     public void setOrt(String ort) {
         this.ort = ort;
