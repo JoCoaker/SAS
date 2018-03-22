@@ -11,12 +11,12 @@ public class Pilot {
     private Fluglinie arbeitgeber;
     private List<Flug> auftraege;
 
-    public Pilot(String name, String vorname, int personNr, Fluglinie arbeitgeber, List<Flug> aufträge) {
+    public Pilot(String name, String vorname, int personNr, Fluglinie arbeitgeber, List<Flug> auftraege) {
         this.name = name;
         this.vorname = vorname;
         this.personNr = personNr;
         this.arbeitgeber = arbeitgeber;
-        this.auftraege = aufträge;
+        this.auftraege = auftraege;
 
         System.out.println(toString() + " angelegt");
     }
