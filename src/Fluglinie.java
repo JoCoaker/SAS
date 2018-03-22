@@ -34,7 +34,7 @@ public class Fluglinie {
 	
 	
 	/*
-	 * Getter�s and Setter`s
+	 * Getters and Setters
 	 */
     public List<Flug> getFluege() {
 		return fluege;
