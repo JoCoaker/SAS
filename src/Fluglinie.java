@@ -34,7 +34,7 @@ public class Fluglinie {
 	
 	
 	/*
-	 * Getter´s and Setter`s
+	 * Getterï¿½s and Setter`s
 	 */
     public List<Flug> getFluege() {
 		return fluege;
@@ -70,7 +70,7 @@ public class Fluglinie {
 		if(this.piloten.size()>1) {
 			return this.piloten.remove(pilot);
 		}else {
-			throw new IllegalArgumentException("Die Flugliene benötigt min. einen Piloten");		//Benötigt min. einen Piloten!!!
+			throw new IllegalArgumentException("Die Flugliene benÃ¶tigt min. einen Piloten");		//BenÃ¶tigt min. einen Piloten!!!
 		}
 	}
 	
