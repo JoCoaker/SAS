@@ -10,15 +10,19 @@ import java.util.*;
 public class Fluglinie {
 	
 	// Klassen Variablen
-	List<Flug> fluege;
-	List<Pilot> piloten;
+	private List<Flug> fluege;
+	private List<Pilot> piloten;
+	private String name;
+	private String iataKuerzel;
 	
 	/*
 	 * Konstruktor mit den Fluegen
 	 */
-	public Fluglinie(List<Flug> fluege, List<Pilot> piloten){
+	public Fluglinie(List<Flug> fluege, List<Pilot> piloten, String name, String iataKuerzel){
 		this.fluege = fluege;
 		this.piloten = piloten;
+		this.name = name;
+		this.iataKuerzel = iataKuerzel;
 		
 		System.out.println(this.toString() + " angelegt.");	
 	}
@@ -70,11 +74,11 @@ public class Fluglinie {
 		if(this.piloten.size()>1) {
 			return this.piloten.remove(pilot);
 		}else {
-			throw new IllegalArgumentException("Die Flugliene benötigt min. einen Piloten");		//Benötigt min. einen Piloten!!!
+			throw new IllegalArgumentException("Die Flugliene benoetigt min. einen Piloten");		//Benoetigt min. einen Piloten!!!
 		}
 	}
 	
-	public boolean reomveFlug(Flug flug) {
+	public boolean removeFlug(Flug flug) {
 		return this.fluege.remove(flug);
 	}
 	
@@ -86,7 +90,7 @@ public class Fluglinie {
 
 	@Override
     public String toString() {
-        return "fill";
+        return name + " " + iataKuerzel;
     }
 	
 	
