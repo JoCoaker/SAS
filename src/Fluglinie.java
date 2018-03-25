@@ -90,7 +90,7 @@ public class Fluglinie {
 
 	@Override
     public String toString() {
-        return "fill";
+        return name + " " + iataKuerzel;
     }
 	
 	
