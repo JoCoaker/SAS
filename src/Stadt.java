@@ -25,6 +25,15 @@ public class Stadt {
     }
 
     /**
+     * Konstruktor
+     * @param name Name der Stadt
+     */
+    public Stadt(String name) {
+        this.name = name;
+        System.out.println(String.format("Stadt '%s' erstellt!", name));
+    }
+
+    /**
      * Ordnet einen Flughafen dieser Stadt zu.
      * Neue Flughäfen werden immer an's Ende der Liste gestellt.
      * @param f Flughafen, der dieser Stadt zugeordnet werden soll

@@ -4,14 +4,12 @@
  * @version 1.0.0
  */
 public class Sitzplatz {
-    private String ort;
     private int reihe;
     private char platz;
 
     private Flugzeug standort;
 
-    Sitzplatz(String ort, int reihe, char platz,Flugzeug standort){
-        this.setOrt(ort);
+    Sitzplatz(int reihe, char platz, Flugzeug standort){
         this.setReihe(reihe);
         this.setPlatz(platz);
         this.setStandort(standort);
@@ -47,9 +45,6 @@ public class Sitzplatz {
     /*
      *  Getter
      */
-    public String getOrt() {
-        return ort;
-    }
 
     public int getReihe() {
         return reihe;
@@ -66,10 +61,6 @@ public class Sitzplatz {
     /*
      *   Setter
      */
-
-    public void setOrt(String ort) {
-        this.ort = ort;
-    }
 
     public void setReihe(int reihe) {
         this.reihe = reihe;
