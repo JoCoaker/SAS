@@ -224,8 +224,23 @@ public class Flug
             this.destinationen[index] = null;
     }
 
+    public void show(){
+        System.out.println(toString()+" am "+getDatum());
+        System.out.println("angeboten von "+organisator);
+        System.out.print("gefolgen von "+piloten[0]);
+        for(int i=1;piloten[i]!=null||i<=3;i++){
+            System.out.println(" und "+piloten[i]);
+        }
+        System.out.println();
+        System.out.println("startet in "+herkuenfte[0]+" bei "+herkuenfte[0].getEinzugsgebiet());
+        System.out.println("landet in "+destinationen[0]+" bei "+destinationen[0].getEinzugsgebiet());
+        System.out.println("wird durchgeführt mit "+befoerderungsmittel.getKennzeichen()+"("+befoerderungsmittel.getModel+")");
+        System.out.print("befördert Passagiere: ");
+        Flugzeug.getAlleSitzplaetze.forEach((key,value) -> System.out.println(value "auf Platz "+key));
+    }
     @Override
     public String toString() {
         return this.getClass().getName() + " '" + this.flugNummer + "'";
     }
+
 }
