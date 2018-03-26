@@ -54,7 +54,7 @@ public class SASBuildUp {
     }
 
     private void buildAirline() {
-        theAirline = new Fluglinie(new ArrayList<>(), new ArrayList<>(), "Special Air Services", "SAS");
+        theAirline = new Fluglinie(new ArrayList<>(), new ArrayList<>(), "Special Air Service", "SAS");
     }
 
     private void buildPilots() {
