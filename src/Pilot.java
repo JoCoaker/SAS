@@ -58,11 +58,13 @@ public class Pilot {
     }
 
     public void verspaeten() {
-        System.out.println(toString() + " wird verspätet");
+        System.out.println(toString() + " verspätet sich");
     }
 
     @Override
     public String toString() {
-        return "Pilot " + personNr;
+        String identifier = "Pilot" + personNr;
+        System.out.println(identifier);
+        return identifier;
     }
 }
