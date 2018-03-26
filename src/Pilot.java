@@ -1,7 +1,7 @@
 import java.util.List;
 
 /**
- * @author Simon Stratemeier 199067
+ * @author Simon Stratemeier {199067}
  */
 public class Pilot {
     private String name;
