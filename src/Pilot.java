@@ -18,7 +18,7 @@ public class Pilot {
         this.arbeitgeber = arbeitgeber;
         this.auftraege = auftraege;
 
-        System.out.println(toString() + " angelegt");
+        System.out.println(toString() + " angelegt.");
     }
 
     public String getName() {
@@ -63,6 +63,6 @@ public class Pilot {
 
     @Override
     public String toString() {
-        return "Pilot '" + this.name +", " + this.vorname + "' " + this.personNr;
+        return "Pilot '" + this.name + ", " + this.vorname + "' " + this.personNr;
     }
 }

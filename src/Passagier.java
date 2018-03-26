@@ -13,7 +13,7 @@ public class Passagier {
     private Flug reiseMittel;
     private Sitzplatz sitzplatz;
 
-    public Passagier(String name, String vorname, String geschlecht){
+    public Passagier(String name, String vorname, String geschlecht) {
         this.name = name;
         this.vorname = vorname;
         this.geschlecht = geschlecht;
@@ -22,18 +22,35 @@ public class Passagier {
     }
 
 
-    public String getName(){ return name;}
+    public String getName() {
+        return name;
+    }
 
-    public String getVorname() { return vorname;}
+    public String getVorname() {
+        return vorname;
+    }
 
-    public String getGeschlecht() { return geschlecht;}
+    public String getGeschlecht() {
+        return geschlecht;
+    }
 
-    public Flug getReiseMittel() { return reiseMittel;}
+    public Flug getReiseMittel() {
+        return reiseMittel;
+    }
 
-    public Sitzplatz getSitzplatz() { return sitzplatz;}
+    public Sitzplatz getSitzplatz() {
+        return sitzplatz;
+    }
 
-    public void setSitzplatz(Sitzplatz sitzplatz){ this.sitzplatz = sitzplatz; }
+    public void setSitzplatz(Sitzplatz sitzplatz) {
+        this.sitzplatz = sitzplatz;
+    }
 
-    public void setReisemittel(Flug reiseMittel){ this.reiseMittel = reiseMittel; }
-    public String toString(){ return this.getClass().getName() +  " '" + this.name + ", " + this.vorname + "'";}
+    public void setReisemittel(Flug reiseMittel) {
+        this.reiseMittel = reiseMittel;
+    }
+
+    public String toString() {
+        return this.getClass().getName() + " '" + this.name + ", " + this.vorname + "' " + (this.geschlecht.equals("m") ? "Mr." : "Ms.");
+    }
 }

@@ -18,7 +18,7 @@ public class Flugzeug {
         this.serienNummer = serienNummer;
         this.flugStunden = flugStunden;
         this.kennzeichen = kennzeichen;
-        System.out.println(toString() + " angelegt");
+        System.out.println(toString() + " angelegt.");
     }
 
     public String getModell() {

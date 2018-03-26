@@ -6,8 +6,7 @@ import java.util.Date;
  * @author Lukas Reichert [199034]
  * @version 1.0.0
  */
-public class Flug
-{
+public class Flug {
 
     // Klassen Variablen
     private Date datum;
@@ -21,6 +20,7 @@ public class Flug
 
     /**
      * Konstruktor
+     *
      * @param datum
      * @param flugNummer
      * @param organisator
@@ -30,7 +30,7 @@ public class Flug
      * @param herkuenfte
      * @param destinationen
      */
-    public Flug(Date datum, String flugNummer, Fluglinie organisator, Flugzeug befoerderungsmittel, Pilot[] piloten, Passagier[] passagiere, Flughafen[] herkuenfte, Flughafen[] destinationen){
+    public Flug(Date datum, String flugNummer, Fluglinie organisator, Flugzeug befoerderungsmittel, Pilot[] piloten, Passagier[] passagiere, Flughafen[] herkuenfte, Flughafen[] destinationen) {
         this.datum = datum;
         this.flugNummer = flugNummer;
         this.organisator = organisator;
@@ -45,12 +45,13 @@ public class Flug
 
     /**
      * Konstruktor
+     *
      * @param datum
      * @param flugNummer
      * @param organisator
      * @param befoerderungsmittel
      */
-    public Flug(Date datum, String flugNummer, Fluglinie organisator, Flugzeug befoerderungsmittel){
+    public Flug(Date datum, String flugNummer, Fluglinie organisator, Flugzeug befoerderungsmittel) {
         this.datum = datum;
         this.flugNummer = flugNummer;
         this.organisator = organisator;
@@ -159,7 +160,7 @@ public class Flug
     public boolean addPilot(Pilot pilot) {
         boolean success = false;
         for (int i = 0; i < this.piloten.length; i++) {
-            if(this.piloten[i] == null) {
+            if (this.piloten[i] == null) {
                 this.piloten[i] = pilot;
                 i = this.piloten.length;
                 success = true;
@@ -171,7 +172,7 @@ public class Flug
     public boolean addPassagier(Passagier passagier) {
         boolean success = false;
         for (int i = 0; i < this.passagiere.length; i++) {
-            if(this.passagiere[i] == null) {
+            if (this.passagiere[i] == null) {
                 this.passagiere[i] = passagier;
                 i = this.passagiere.length;
                 success = true;
@@ -183,7 +184,7 @@ public class Flug
     public boolean addHerkunft(Flughafen herkunft) {
         boolean success = false;
         for (int i = 0; i < this.herkuenfte.length; i++) {
-            if(this.herkuenfte[i] == null) {
+            if (this.herkuenfte[i] == null) {
                 this.herkuenfte[i] = herkunft;
                 i = this.herkuenfte.length;
                 success = true;
@@ -195,7 +196,7 @@ public class Flug
     public boolean addDestination(Flughafen destination) {
         boolean success = false;
         for (int i = 0; i < this.destinationen.length; i++) {
-            if(this.destinationen[i] == null) {
+            if (this.destinationen[i] == null) {
                 this.destinationen[i] = destination;
                 i = this.destinationen.length;
                 success = true;
@@ -224,20 +225,31 @@ public class Flug
             this.destinationen[index] = null;
     }
 
-    public void show(){
-        System.out.println(toString()+" am "+getDatum());
-        System.out.println("angeboten von "+organisator);
-        System.out.print("gefolgen von "+piloten[0]);
-        for(int i=1;piloten[i]!=null||i<=3;i++){
-            System.out.println(" und "+piloten[i]);
+    public void show() {
+        System.out.println(toString() + " am " + new java.text.SimpleDateFormat("yyyy-MM-dd").format(datum));
+        System.out.println("angeboten von " + organisator);
+        System.out.print("geflogen von " + piloten[0]);
+        for (int i = 1; i < piloten.length; i++) {
+            if (piloten[i] != null)
+                System.out.println(" und " + piloten[i]);
         }
         System.out.println();
-        System.out.println("startet in "+herkuenfte[0]+" bei "+herkuenfte[0].getEinzugsgebiet());
-        System.out.println("landet in "+destinationen[0]+" bei "+destinationen[0].getEinzugsgebiet());
-        System.out.println("wird durchgeführt mit "+befoerderungsmittel.getKennzeichen()+"("+befoerderungsmittel.getModel+")");
+        System.out.println("startet in " + herkuenfte[0] + " bei " + herkuenfte[0].getEinzugsgebiet());
+        System.out.println("landet in " + destinationen[0] + " bei " + destinationen[0].getEinzugsgebiet());
+        System.out.println("wird durchgeführt mit " + befoerderungsmittel.getKennzeichen() + "(" + befoerderungsmittel.getModell() + ")");
         System.out.print("befördert Passagiere: ");
-        Flugzeug.getAlleSitzplaetze.forEach((key,value) -> System.out.println(value "auf Platz "+key));
+        for (int i = 0; i <  passagiere.length; i++) {
+            if (passagiere[i] != null) {
+                System.out.print(passagiere[i] + " auf Platz " + passagiere[i].getSitzplatz().getReihe() + passagiere[i].getSitzplatz().getPlatz());
+
+                if (i + 1 < passagiere.length && passagiere[i + 1] != null) {
+                    System.out.print(" und ");
+                }
+            }else
+                break;
+        }
     }
+
     @Override
     public String toString() {
         return this.getClass().getName() + " '" + this.flugNummer + "'";

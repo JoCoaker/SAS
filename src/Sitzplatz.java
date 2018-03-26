@@ -9,7 +9,6 @@ public class Sitzplatz {
     private char platz;
 
     private Flugzeug standort;
-    private Passagier passagier;
 
     Sitzplatz(int reihe, char platz, Flugzeug standort) {
         this.setReihe(reihe);
@@ -47,10 +46,6 @@ public class Sitzplatz {
         return reihe;
     }
 
-    public Passagier getPassagier() {
-        return passagier;
-    }
-
     public char getPlatz() {
         return platz;
     }
@@ -65,10 +60,6 @@ public class Sitzplatz {
 
     public void setReihe(int reihe) {
         this.reihe = reihe;
-    }
-
-    public void setPassagier(Passagier passagier) {
-        this.passagier = passagier;
     }
 
     public void setPlatz(char platz) {
