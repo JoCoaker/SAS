@@ -1,7 +1,7 @@
 import java.util.List;
 
 /**
- * @author Simon Stratemeier 199067
+ * @author Simon Stratemeier {199067}
  */
 public class Pilot {
     private String name;
@@ -18,7 +18,7 @@ public class Pilot {
         this.arbeitgeber = arbeitgeber;
         this.auftraege = auftraege;
 
-        System.out.println(toString() + " angelegt");
+        System.out.println(toString() + " angelegt.");
     }
 
     public String getName() {
@@ -63,8 +63,6 @@ public class Pilot {
 
     @Override
     public String toString() {
-        String identifier = "Pilot" + personNr;
-        System.out.println(identifier);
-        return identifier;
+        return "Pilot '" + this.name + ", " + this.vorname + "' " + this.personNr;
     }
 }
