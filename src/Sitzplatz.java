@@ -1,5 +1,6 @@
 /**
  * Repräsentiert einen Sitzplatz in einem Flugzeug.
+ *
  * @author Niklas Kapelle (198980)
  * @version 1.0.0
  */
@@ -9,7 +10,7 @@ public class Sitzplatz {
 
     private Flugzeug standort;
 
-    Sitzplatz(int reihe, char platz, Flugzeug standort){
+    Sitzplatz(int reihe, char platz, Flugzeug standort) {
         this.setReihe(reihe);
         this.setPlatz(platz);
         this.setStandort(standort);
@@ -17,29 +18,29 @@ public class Sitzplatz {
         System.out.println(this.toString() + " angelegt.");
     }
 
-    Sitzplatz(){
+    Sitzplatz() {
         System.out.println(this.toString() + " angelegt.");
     }
 
-    public void heizen(){
+    public void heizen() {
         System.out.println(this.toString() + " wird beheitzt.");
     }
 
-    public void einstellen(){
+    public void einstellen() {
         System.out.println(this.toString() + " wird eingestellt.");
     }
 
-    public void reservieren(){
+    public void reservieren() {
         System.out.println(this.toString() + " wird reserviert.");
     }
 
-    public void reparieren(){
+    public void reparieren() {
         System.out.println(this.toString() + " wird repariert.");
     }
 
     @Override
     public String toString() {
-        return this.getClass().getName() + " "+ this.reihe + this.platz;
+        return this.getClass().getName() + " " + this.reihe + this.platz;
     }
 
     /*
@@ -71,9 +72,9 @@ public class Sitzplatz {
     }
 
     public void setStandort(Flugzeug standort) {
-        if(standort == null){
+        if (standort == null) {
             throw new IllegalArgumentException("standort darf nicht null sein");
-        }else{
+        } else {
             this.standort = standort;
         }
     }
