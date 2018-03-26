@@ -19,6 +19,10 @@ public class Sitzplatz {
         System.out.println(this.toString() + " angelegt.");
     }
 
+    Sitzplatz(){
+        System.out.println(this.toString() + " angelegt.");
+    }
+
     public void heizen(){
         System.out.println(this.toString() + " wird beheitzt.");
     }

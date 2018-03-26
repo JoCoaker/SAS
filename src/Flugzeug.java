@@ -18,7 +18,7 @@ public class Flugzeug {
         this.serienNummer = serienNummer;
         this.flugStunden = flugStunden;
         this.kennzeichen = kennzeichen;
-        System.out.println("Flugzeig " + kennzeichen + " angelegt");
+        System.out.println("Flugzeug " + kennzeichen + " angelegt");
     }
 
     public String getModell() {
@@ -58,12 +58,12 @@ public class Flugzeug {
     }
 
 
-    public Sitzplatz getSitzplatz(String key) {
-        return sitzplaetze.get(key);
+    public Sitzplatz getSitzplatz(String sitzplatznummer) {
+        return sitzplaetze.get(sitzplatznummer);
     }
 
-    public void addSitzplatz(String key, Sitzplatz sitzplatz) {
-        sitzplaetze.put(key, sitzplatz);
+    public void addSitzplatz(String sitzplatznummer, Sitzplatz sitzplatz) {
+        sitzplaetze.put(sitzplatznummer, sitzplatz);
     }
 
     @Override

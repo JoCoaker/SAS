@@ -73,11 +73,11 @@ public class Flughafen {
 		return lataKuerzel;
 	}
 
-	public void setEinzugsgebiet(String einzugsgebiet) {
+	public void setEinzugsgebiet(Stadt einzugsgebiet) {
 		this.einzugsgebiet = einzugsgebiet;
 	}
 
-	public String getEinzugsgebiet() {
+	public Stadt getEinzugsgebiet() {
 		return einzugsgebiet;
 	}
 	
