@@ -21,6 +21,7 @@ public class Stadt {
     public Stadt(String name, Flughafen ersterFlughafen) {
         this.name = name;
         addFlughafen(ersterFlughafen);
+        System.out.println(String.format("Stadt '%s' mit erstem Flughafen '%s' erstellt!", name, ersterFlughafen.toString()));
     }
 
     /**
@@ -40,6 +41,9 @@ public class Stadt {
             throw new UnsupportedOperationException("Der angegebene Flughafen ist dieser Stadt bereits zugeordnet.");
 
         flughafens[numFlughafens++] = f;
+
+        System.out.println(String.format("Stadt '%s' hat als %dten Flughafen '%s' bekommen", name, numFlughafens, f.toString()));
+
         return numFlughafens;
     }
 
@@ -71,6 +75,7 @@ public class Stadt {
             throw new UnsupportedOperationException("Der einzige Flughafen einer Stadt kann nicht entfernt werden!");
 
         // delete it
+        System.out.println(String.format("Stadt '%s' wird ab sofort nicht mehr von Flughafen '%s' bedient", name, flughafens[index].toString()));
         flughafens[index] = null;
 
         // move the remaining down
@@ -90,7 +95,7 @@ public class Stadt {
 
     //XXX  'Flughafen' muss `equals' und und `hashCode' überschreiben, damit auch die
     //XXX   exakte Kopie eines Flughafens als identisch mit seinem Original erkannt wird!
-    //      (ansonsten werden nur Referenzen verglichen - was aber aber auch das gewünschte Verhalten sein könnte)
+    //      (ansonsten werden nur Referenzen verglichen - was aber auch das gewünschte Verhalten sein kann)
     private int findFlughafen(Flughafen f) {
         for (int i = 0; i < numFlughafens; i++) {
             if(flughafens[i] == f || flughafens[i].equals(f)) {
