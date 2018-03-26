@@ -16,24 +16,27 @@ public class Flughafen {
 
 	private List<Flug> ankuenfte;
 	private List<Flug> herkunft;
+	private Stadt einzugsgebiet;
 
-	public Flughafen(String name, String lataKuerzel, List<Flug> ankuenfte, List<Flug> herkunft) {
+	public Flughafen(String name, String lataKuerzel, List<Flug> ankuenfte, List<Flug> herkunft, Stadt einzugsgebiet) {
 
 		this.name = name;
 		this.lataKuerzel = lataKuerzel;
 		this.ankuenfte = ankuenfte;
 		this.herkunft = herkunft;
+		this.einzugsgebiet = einzugsgebiet;
 
 		System.out.println(toString() + "angelegt");
 	}
 
 	// Falls Flughafen keine Ankuenfte oder Herkuenfte besitzt (z.B. neu gebaut)
-	public Flughafen(String name, String lataKuerzel) {
+	public Flughafen(String name, String lataKuerzel, Stadt einzugsgebiet) {
 
 		this.name = name;
 		this.lataKuerzel = lataKuerzel;
 		this.ankuenfte = new ArrayList<Flug>();
 		this.herkunft = new ArrayList<Flug>();
+		this.einzugsgebiet = einzugsgebiet;
 
 		System.out.println(toString() + "angelegt");
 	}
@@ -70,6 +73,14 @@ public class Flughafen {
 		return lataKuerzel;
 	}
 
+	public void setEinzugsgebiet(String einzugsgebiet) {
+		this.einzugsgebiet = einzugsgebiet;
+	}
+
+	public String getEinzugsgebiet() {
+		return einzugsgebiet;
+	}
+	
 	public String toString() {
 		return this.getClass().getName() + " " + name + " " + lataKuerzel;
 	}
