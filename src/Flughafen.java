@@ -38,7 +38,7 @@ public class Flughafen {
 		this.herkunft = new ArrayList<Flug>();
 		this.einzugsgebiet = einzugsgebiet;
 
-		System.out.println(toString() + "angelegt");
+		System.out.println(toString() + " angelegt");
 	}
 
 	public void setLataKuerzel(String lataKuerzel) {
@@ -80,10 +80,6 @@ public class Flughafen {
 	public Stadt getEinzugsgebiet() {
 		return einzugsgebiet;
 	}
-	
-	public String toString() {
-		return this.getClass().getName() + " " + name + " " + lataKuerzel;
-	}
 
 	public boolean addAnkunft(Flug ankuenfte) {
 		return this.ankuenfte.add(ankuenfte);
@@ -119,5 +115,9 @@ public class Flughafen {
 
 	public void reparieren() {
 		System.out.println(toString() + " wird repariert");
+	}
+
+	public String toString() {
+		return this.getClass().getName() + " '" + name + "' " + lataKuerzel;
 	}
 }

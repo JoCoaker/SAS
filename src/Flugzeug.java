@@ -1,8 +1,8 @@
 import java.util.HashMap;
 
 /**
- * @Author: Tobias Fetzer
- * @Date: 20/03/18
+ * @author Tobias Fetzer [198318]
+ * @date 20/03/18
  */
 public class Flugzeug {
 
@@ -18,7 +18,7 @@ public class Flugzeug {
         this.serienNummer = serienNummer;
         this.flugStunden = flugStunden;
         this.kennzeichen = kennzeichen;
-        System.out.println("Flugzeug " + kennzeichen + " angelegt");
+        System.out.println(toString() + " angelegt");
     }
 
     public String getModell() {
@@ -66,11 +66,6 @@ public class Flugzeug {
         sitzplaetze.put(sitzplatznummer, sitzplatz);
     }
 
-    @Override
-    public String toString() {
-        return "Flugzeig " + kennzeichen;
-    }
-
     public void heizen() {
         System.out.println(toString() + " wird geheizt");
     }
@@ -101,6 +96,11 @@ public class Flugzeug {
 
     public void streichen() {
         System.out.println(toString() + " wird gestrichen");
+    }
+
+    @Override
+    public String toString() {
+        return "Flugzeug '" + kennzeichen + "'";
     }
 
 }

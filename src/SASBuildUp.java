@@ -16,10 +16,24 @@ public class SASBuildUp {
 
 
     public static void main(String[] args) {
-
+        new SASBuildUp();
     }
+
+    public SASBuildUp() {
+        buildAirline();
+        buildPilots();
+        buildCities();
+        buildAirports();
+        buildPassangers();
+        buildAirplanes();
+        buildOutboundFlight();
+        outboundFlight.show();
+        buildInboundFlight();
+        inboundFlight.show();
+    }
+
     private void  buildAirline() {
-        theAirline = new Fluglinie(new ArrayList<>(), new ArrayList<>(),  "Scandinavian Airlines", "SAS");
+        theAirline = new Fluglinie(new ArrayList<>(), new ArrayList<>(),  "Special Air Services", "SAS");
     }
     private void buildPilots() {
         thePilot = new Pilot("Whitaker", "John", 199261, theAirline, new ArrayList<>());
@@ -43,18 +57,25 @@ public class SASBuildUp {
         theAirplane.addSitzplatz("16E", s1);
         theAirplane.addSitzplatz("16D", s2);
     }
-    private void buildFlights() {
+    private void buildOutboundFlight() {
         outboundFlight = new Flug(new Date(1516971600000L), "LH1234", theAirline, theAirplane);
         outboundFlight.addHerkunft(depAirport);
         outboundFlight.addPilot(thePilot);
         outboundFlight.addPassagier(p1);
         outboundFlight.addPassagier(p2);
         outboundFlight.addDestination(destAirport);
-
+        p1.setReisemittel(outboundFlight);
+        p1.setSitzplatz(theAirplane.getSitzplatz("16E"));
+        p2.setReisemittel(outboundFlight);
+        p2.setSitzplatz(theAirplane.getSitzplatz("16D"));
+    }
+    private void buildInboundFlight() {
         inboundFlight = new Flug(new Date(1517144400000L), "LH1235", theAirline, theAirplane);
         inboundFlight.addHerkunft(destAirport);
         inboundFlight.addPilot(thePilot);
         outboundFlight.addPassagier(p1);
         inboundFlight.addDestination(depAirport);
+        p1.setReisemittel(outboundFlight);
+        p1.setSitzplatz(theAirplane.getSitzplatz("16E"));
     }
 }

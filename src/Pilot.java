@@ -63,8 +63,6 @@ public class Pilot {
 
     @Override
     public String toString() {
-        String identifier = "Pilot" + personNr;
-        System.out.println(identifier);
-        return identifier;
+        return "Pilot '" + this.name +", " + this.vorname + "' " + this.personNr;
     }
 }

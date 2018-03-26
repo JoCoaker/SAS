@@ -18,7 +18,7 @@ public class Passagier {
         this.vorname = vorname;
         this.geschlecht = geschlecht;
 
-        System.out.println("Passagier " + name + " " + vorname + " angelegt.");
+        System.out.println(toString() + " angelegt.");
     }
 
 
@@ -35,5 +35,5 @@ public class Passagier {
     public void setSitzplatz(Sitzplatz sitzplatz){ this.sitzplatz = sitzplatz; }
 
     public void setReisemittel(Flug reiseMittel){ this.reiseMittel = reiseMittel; }
-    public String toString(){ return this.getClass().getName() +  " " + this.name + " " + this.vorname;}
+    public String toString(){ return this.getClass().getName() +  " '" + this.name + ", " + this.vorname + "'";}
 }

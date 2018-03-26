@@ -226,6 +226,6 @@ public class Flug
 
     @Override
     public String toString() {
-        return this.getClass().getName() + " " + this.flugNummer;
+        return this.getClass().getName() + " '" + this.flugNummer + "'";
     }
 }
