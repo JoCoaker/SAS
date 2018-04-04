@@ -1,8 +1,8 @@
 import java.util.HashMap;
-
+import java.util.ArrayList;
 /**
  * @author Tobias Fetzer [198318]
- * @date 20/03/18
+ * @date 04/04/18
  */
 public class Flugzeug {
 
@@ -11,6 +11,7 @@ public class Flugzeug {
     private float flugStunden;
     private String kennzeichen;
     private HashMap<String, Sitzplatz> sitzplaetze = new HashMap<>();
+    private ArrayList<Flug> auftrag = new ArrayList()<>;
 
 
     public Flugzeug(String modell, String serienNummer, float flugStunden, String kennzeichen) {
@@ -65,7 +66,15 @@ public class Flugzeug {
     public void addSitzplatz(String sitzplatznummer, Sitzplatz sitzplatz) {
         sitzplaetze.put(sitzplatznummer, sitzplatz);
     }
+    
+    public void addAuftrag(Flug auftrag){
+        auftrag.add(Flug);
+    }
 
+    public auftrag getAuftrag(){
+        return auftrag;
+    }
+    
     public void heizen() {
         System.out.println(toString() + " wird geheizt");
     }
