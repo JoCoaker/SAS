@@ -36,10 +36,8 @@ public class SASBuildUp {
 
         outboundFlight.show();
 
-        p1.setSitzplatz(null);
-        p1.setReisemittel(null);
-        p2.setSitzplatz(null);
-        p2.setReisemittel(null);
+        p1.setBordkarte(null);
+        p2.setBordkarte(null);
 
         System.out.println();
         System.out.println("----- " + outboundFlight + " beendet -----");
@@ -93,10 +91,9 @@ public class SASBuildUp {
         outboundFlight.addPassagier(p1);
         outboundFlight.addPassagier(p2);
         outboundFlight.addDestination(destAirport);
-        p1.setReisemittel(outboundFlight);
-        p1.setSitzplatz(theAirplane.getSitzplatz("16E"));
-        p2.setReisemittel(outboundFlight);
-        p2.setSitzplatz(theAirplane.getSitzplatz("16D"));
+
+        p1.setBordkarte(theAirplane.getSitzplatz("16E").reservieren(p1, outboundFlight));
+        p2.setBordkarte(theAirplane.getSitzplatz("16D").reservieren(p2, outboundFlight));
     }
 
     private void buildInboundFlight() {
@@ -105,7 +102,7 @@ public class SASBuildUp {
         inboundFlight.addPilot(thePilot);
         inboundFlight.addPassagier(p1);
         inboundFlight.addDestination(depAirport);
-        p1.setReisemittel(inboundFlight);
-        p1.setSitzplatz(theAirplane.getSitzplatz("16E"));
+
+        p1.setBordkarte(theAirplane.getSitzplatz("16E").reservieren(p1, inboundFlight));
     }
 }

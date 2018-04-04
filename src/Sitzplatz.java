@@ -30,8 +30,11 @@ public class Sitzplatz {
         System.out.println(this.toString() + " wird eingestellt.");
     }
 
-    public void reservieren() {
+    public Bordkarte reservieren(Passagier p, Flug f) {
+        Bordkarte bordkarte = new Bordkarte(p, f, this);
         System.out.println(this.toString() + " wird reserviert.");
+
+        return bordkarte;
     }
 
     public void reparieren() {

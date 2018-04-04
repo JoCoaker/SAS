@@ -11,7 +11,7 @@ public class Flugzeug {
     private float flugStunden;
     private String kennzeichen;
     private HashMap<String, Sitzplatz> sitzplaetze = new HashMap<>();
-    private ArrayList<Flug> auftrag = new ArrayList()<>;
+    private ArrayList<Flug> auftrag = new ArrayList<>();
 
 
     public Flugzeug(String modell, String serienNummer, float flugStunden, String kennzeichen) {
@@ -68,10 +68,10 @@ public class Flugzeug {
     }
     
     public void addAuftrag(Flug auftrag){
-        auftrag.add(Flug);
+        this.auftrag.add(auftrag);
     }
 
-    public auftrag getAuftrag(){
+    public ArrayList<Flug> getAuftraege(){
         return auftrag;
     }
     

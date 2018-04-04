@@ -10,8 +10,7 @@ public class Passagier {
     private String vorname;
 
     private String geschlecht;
-    private Flug reiseMittel;
-    private Sitzplatz sitzplatz;
+    private Bordkarte bordkarte;
 
     public Passagier(String name, String vorname, String geschlecht) {
         this.name = name;
@@ -34,20 +33,12 @@ public class Passagier {
         return geschlecht;
     }
 
-    public Flug getReiseMittel() {
-        return reiseMittel;
+    public void setBordkarte(Bordkarte bordkarte) {
+        this.bordkarte = bordkarte;
     }
 
-    public Sitzplatz getSitzplatz() {
-        return sitzplatz;
-    }
-
-    public void setSitzplatz(Sitzplatz sitzplatz) {
-        this.sitzplatz = sitzplatz;
-    }
-
-    public void setReisemittel(Flug reiseMittel) {
-        this.reiseMittel = reiseMittel;
+    public Bordkarte getBordkarte() {
+        return bordkarte;
     }
 
     public String toString() {

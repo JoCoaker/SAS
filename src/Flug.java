@@ -240,7 +240,7 @@ public class Flug {
         System.out.print("befördert Passagiere: ");
         for (int i = 0; i <  passagiere.length; i++) {
             if (passagiere[i] != null) {
-                System.out.print(passagiere[i] + " auf Platz " + passagiere[i].getSitzplatz().getReihe() + passagiere[i].getSitzplatz().getPlatz());
+                System.out.print(passagiere[i] + " auf Platz " + passagiere[i].getBordkarte().getSitzplatz().getReihe() + passagiere[i].getBordkarte().getSitzplatz().getPlatz());
 
                 if (i + 1 < passagiere.length && passagiere[i + 1] != null) {
                     System.out.print(" und ");
